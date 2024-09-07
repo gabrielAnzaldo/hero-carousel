@@ -95,8 +95,16 @@ import {colorThemeType} from './documents/colorTheme'
 import {pageType} from './documents/page'
 import {productType} from './documents/product'
 import {productVariantType} from './documents/productVariant'
+import {carouselType} from './documents/carousel'
 
-const documents = [collectionType, colorThemeType, pageType, productType, productVariantType]
+const documents = [
+  collectionType,
+  colorThemeType,
+  pageType,
+  productType,
+  productVariantType,
+  carouselType,
+]
 
 import {homeType} from './singletons/homeType'
 import {settingsType} from './singletons/settingsType'
