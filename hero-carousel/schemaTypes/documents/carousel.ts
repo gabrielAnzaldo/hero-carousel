@@ -20,13 +20,38 @@ export const carouselType = defineType({
           type: 'object',
           fields: [
             defineField({
-              name: 'image',
-              title: 'Slide Image',
-              type: 'image',
-              options: {
-                hotspot: true,
-              },
-              validation: (Rule) => Rule.required(),
+              name: 'media',
+              title: 'Slide Media',
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'asset',
+                  title: 'Image or Video',
+                  type: 'array',
+                  of: [
+                    {
+                      type: 'image',
+                      title: 'Image',
+                      options: {
+                        hotspot: true,
+                      },
+                      validation: (Rule) =>
+                        Rule.required().error('You need to add an image or video.'),
+                    },
+                    {
+                      type: 'file',
+                      title: 'Video',
+                      options: {
+                        accept: 'video/*',
+                      },
+                      validation: (Rule) =>
+                        Rule.required().error('You need to add an image or video.'),
+                    },
+                  ],
+                  validation: (Rule) =>
+                    Rule.length(1).error('Only one media asset (image or video) is allowed.'),
+                }),
+              ],
             }),
             defineField({
               name: 'caption',
