@@ -27,7 +27,14 @@ export default function Homepage() {
     <div className="home">
       <h2>Carousel will go here: </h2>
       {sliders.map((item) => (
-        <h3 key={item.title}>{item.title}</h3>
+        <section key={item.title}>
+          {item.slides?.length > 0 && (
+            <div>
+              <h3>{item.title}</h3>
+              number of slides: {item.slides?.length}
+            </div>
+          )}
+        </section>
       ))}
     </div>
   );

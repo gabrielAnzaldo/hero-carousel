@@ -54,13 +54,28 @@ export const carouselType = defineType({
               ],
             }),
             defineField({
-              name: 'caption',
-              title: 'Caption',
+              name: 'title',
+              title: 'Title',
               type: 'string',
             }),
             defineField({
-              name: 'link',
-              title: 'Link',
+              name: 'subTitle',
+              title: 'SubTitle',
+              type: 'string',
+            }),
+            defineField({
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+            }),
+            defineField({
+              name: 'ctaText',
+              title: 'CTA text',
+              type: 'string',
+            }),
+            defineField({
+              name: 'ctaLink',
+              title: 'CTA link',
               type: 'url',
             }),
           ],
