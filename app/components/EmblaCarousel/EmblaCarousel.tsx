@@ -1,5 +1,5 @@
 import useEmblaCarousel from 'embla-carousel-react';
-import {EmblaCarouselProps} from '../types';
+import {EmblaCarouselProps} from '../../types';
 
 const EmblaCarousel = ({title, slides}: EmblaCarouselProps) => {
   const [emblaRef] = useEmblaCarousel();
