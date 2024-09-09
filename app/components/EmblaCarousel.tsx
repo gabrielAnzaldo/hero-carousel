@@ -1,18 +1,22 @@
-type Slide = {
-  title: string;
-  subTitle: string;
-};
-
-type EmblaCarouselProps = {
-  title: string;
-  slides: Slide[];
-};
+import useEmblaCarousel from 'embla-carousel-react';
+import {EmblaCarouselProps} from '../types';
 
 const EmblaCarousel = ({title, slides}: EmblaCarouselProps) => {
+  const [emblaRef] = useEmblaCarousel();
+
   return (
-    <div>
-      {title} - {slides?.length}
-    </div>
+    <>
+      <h2>{title}</h2>
+      <div className="embla" ref={emblaRef}>
+        <div className="embla__container">
+          {slides?.map((slide) => (
+            <div key={slide.title} className="embla__slide">
+              {slide.title}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ export default function Homepage() {
 
   return (
     <div className="home">
-      <h2>Carousel will go here: </h2>
+      <h1>Carousels: </h1>
       {sliders.map((item) => {
         if (item?.slides?.length > 1) console.log('iteem -> ', item);
         return (
