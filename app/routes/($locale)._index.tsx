@@ -19,7 +19,6 @@ export default function Homepage() {
     <div className="home">
       <h1>Carousels: </h1>
       {sliders.map((item) => {
-        if (item?.slides?.length > 1) console.log('iteem -> ', item);
         return (
           <section key={item._id}>
             <EmblaCarousel title={item.title} slides={item.slides} />
