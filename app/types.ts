@@ -4,6 +4,7 @@ type Slide = {
   description: string;
   ctaLink: string;
   ctaText: string;
+  media: any;
 };
 
 export type EmblaCarouselProps = {

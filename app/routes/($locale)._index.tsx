@@ -3,6 +3,15 @@ import {SanityDocument} from '@sanity/client';
 import EmblaCarousel from '../components/EmblaCarousel';
 import {SLIDER_QUERY} from '../queries';
 import sanityClient from '../sanityClient';
+// import createImageUrlBuilder from '@sanity/image-url';
+
+// // const builder = createImageUrlBuilder({
+// //   projectId: '7wzyhx45',
+// //   dataset: 'production',
+// // });
+
+// const builder = createImageUrlBuilder(sanityClient);
+// console.log('-.... ', builder);
 
 export const meta: MetaFunction = () => {
   return [{title: 'Hydrogen | Home'}];

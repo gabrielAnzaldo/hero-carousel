@@ -4,11 +4,11 @@ export const SLIDER_QUERY = `*[_type == "carousel"]{
   "slides": slides[] {
     "media": media.asset[] {
       _type == "image" => {
-        "imageUrl": asset->url,
-        "imageAlt": asset->altText
+        "mediaUrl": asset->url,
+        "mediaAlt": asset->altText
       },
       _type == "file" => {
-        "videoUrl": asset->url
+        "mediaUrl": asset->url
       }
     },
     title,
