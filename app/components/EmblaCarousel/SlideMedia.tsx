@@ -20,7 +20,6 @@ const SlideMedia = ({
     return <video>this is a video</video>;
   }
   const sanityImage = urlFor(mediaUrl);
-  console.log('test: ', sanityImage.width(200).url());
   return <img src={sanityImage.toString()} alt={mediaAlt} />;
 };
 
