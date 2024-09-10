@@ -10,11 +10,7 @@ const EmblaCarousel = ({title, slides}: EmblaCarouselProps) => {
   return (
     <>
       <h2>{title}</h2>
-      <div
-        style={{border: 'solid 1px red'}}
-        className={styles.embla}
-        ref={emblaRef}
-      >
+      <div className={styles.embla} ref={emblaRef}>
         <div className={styles.embla__container}>
           {slides?.map((slide) => {
             // console.log('single slide: ', slide);

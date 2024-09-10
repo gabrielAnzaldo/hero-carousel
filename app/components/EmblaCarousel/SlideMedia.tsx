@@ -1,3 +1,4 @@
+import styles from './carousel.module.css';
 import createImageUrlBuilder from '@sanity/image-url';
 
 const builder = createImageUrlBuilder({
@@ -20,7 +21,13 @@ const SlideMedia = ({
     return <video>this is a video</video>;
   }
   const sanityImage = urlFor(mediaUrl);
-  return <img src={sanityImage.toString()} alt={mediaAlt} />;
+  return (
+    <img
+      className={styles.slide_image}
+      src={sanityImage.toString()}
+      alt={mediaAlt}
+    />
+  );
 };
 
 export default SlideMedia;

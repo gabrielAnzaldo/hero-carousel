@@ -12,8 +12,7 @@
 }
 
 .slide_content {
-  border: solid 2px green;
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .slide_content a {
@@ -21,8 +20,7 @@
 }
 
 .slide_media {
-  border: solid 2px orange;
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .slide_title {
@@ -58,4 +56,12 @@
   border-radius: 30px;
   cursor: pointer;
   text-align: center;
+}
+
+.slide_image {
+  /* set fixed values to prevent CLS issue */
+  width: 50vw;
+  height: 90vh;
+  object-fit: cover;
+  border-bottom-left-radius: 100px;
 }
