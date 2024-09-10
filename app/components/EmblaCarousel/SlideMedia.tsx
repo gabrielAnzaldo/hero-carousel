@@ -18,7 +18,17 @@ const SlideMedia = ({
   const {mediaUrl, mediaAlt} = media;
   const isVideo = mediaUrl?.includes?.('.mov');
   if (isVideo) {
-    return <video>this is a video</video>;
+    return (
+      <div className={styles.slide_video_wrapper}>
+        <video
+          className={styles.slide_video}
+          src={mediaUrl}
+          preload="auto"
+          loop={true}
+          autoPlay
+        />
+      </div>
+    );
   }
   const sanityImage = urlFor(mediaUrl);
   return (

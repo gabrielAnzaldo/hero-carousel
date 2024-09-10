@@ -21,10 +21,12 @@ const SlideContent = ({
 }: SlideContentProps) => {
   return (
     <div className={styles.slide_content}>
-      <Title title={title} />
-      <Subtitle subTitle={subTitle} />
-      <Description description={description} />
-      <CTAButton ctaText={ctaText} ctaLink={ctaLink} />
+      <div className={styles.slide_content_hero}>
+        <Title title={title} />
+        <Subtitle subTitle={subTitle} />
+        <Description description={description} />
+        <CTAButton ctaText={ctaText} ctaLink={ctaLink} />
+      </div>
     </div>
   );
 };
