@@ -26,8 +26,8 @@ export default function Homepage() {
 
   return (
     <div className="home">
-      <h1>Carousels: </h1>
-      {sliders.map((item) => {
+      {/* <h1>Carousels: </h1> */}
+      {[sliders?.[0]].map((item) => {
         return (
           <section key={item._id}>
             <EmblaCarousel title={item.title} slides={item.slides} />

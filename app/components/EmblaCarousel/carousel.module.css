@@ -1,9 +1,20 @@
+body main {
+  margin: 0;
+  background-color: #dbe2dd;
+}
+body main section {
+  padding: 0;
+  position: relative;
+}
 .embla {
-  overflow: hidden;
+  margin: auto;
 }
 .embla__container {
   height: 90vh;
   display: flex;
+}
+.embla__viewport {
+  overflow: hidden;
 }
 .embla__slide {
   display: flex;
@@ -78,4 +89,26 @@
   height: 90vh;
   object-fit: cover;
   border-bottom-left-radius: 100px;
+}
+
+.embla__buttons {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 43px;
+}
+
+.embla__prev,
+.embla__next {
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9bc2ae;
+  border-radius: 9999px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-width: 0px;
 }

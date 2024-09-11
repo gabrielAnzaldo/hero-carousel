@@ -15,9 +15,7 @@ export function Footer({
 }: FooterProps) {
   return (
     <Suspense>
-      <Await resolve={footerPromise}>
-        {(footer) => <footer>footer</footer>}
-      </Await>
+      <Await resolve={footerPromise}>{(footer) => null}</Await>
     </Suspense>
   );
 }
