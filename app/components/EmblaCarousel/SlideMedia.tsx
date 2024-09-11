@@ -21,6 +21,7 @@ const SlideMedia = ({
     return (
       <div className={styles.slide_video_wrapper}>
         <video
+          muted
           className={styles.slide_video}
           src={mediaUrl}
           preload="auto"

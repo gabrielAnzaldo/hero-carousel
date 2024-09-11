@@ -26,7 +26,7 @@ const EmblaCarousel = ({title, slides}: EmblaCarouselProps) => {
         <div className={styles.embla__viewport} ref={emblaRef}>
           <div className={styles.embla__container}>
             {slides?.map((slide) => {
-              // console.log('single slide: ', slide);
+              console.log('single slide: ', slide);
               return (
                 <div key={slide.title} className={styles.embla__slide}>
                   <SlideContent

@@ -5,7 +5,7 @@ export const SLIDER_QUERY = `*[_type == "carousel"]{
     "media": media.asset[] {
       _type == "image" => {
         "mediaUrl": asset->url,
-        "mediaAlt": asset->altText
+        "mediaAlt": alt
       },
       _type == "file" => {
         "mediaUrl": asset->url

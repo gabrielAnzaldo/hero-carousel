@@ -35,6 +35,13 @@ export const carouselType = defineType({
                       options: {
                         hotspot: true,
                       },
+                      fields: [
+                        {
+                          name: 'alt',
+                          type: 'string',
+                          title: 'Alt Text',
+                        },
+                      ],
                       validation: (Rule) =>
                         Rule.required().error('You need to add an image or video.'),
                     },
